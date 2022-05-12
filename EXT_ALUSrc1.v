@@ -28,8 +28,8 @@ module EXT_ALUSrc1 ( //POR AHORA VO A SEGUIR LA TABLA ESA EN EL DIAGRAMA
     output [31:0] Out
     );
     
-    wire ImmI; 
-    wire ImmU;
+    wire [31:0] ImmI; 
+    wire [31:0] ImmU;
     reg [31:0] extendido;
     
     assign ImmI = {20'b0,Imm_12};
