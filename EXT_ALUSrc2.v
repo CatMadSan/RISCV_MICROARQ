@@ -36,11 +36,11 @@ module EXT_ALUSrc2(
     reg [19:0] signoImmI;
     reg [19:0] signoshamtI;
     
-    always @(Imm_12) for (i = 0; i < 20; ++i) signoImmI[i] <= Imm_12[0]; //como estos dos son signed, 
-    always @(Shamt_5) for (i = 0; i < 20; ++i) signoshamtI[i] <= Shamt_5[0]; //hay que extenderlos acordemente
+    always @(Imm_12) for (i = 0; i < 20; i = i+1) signoImmI[i] <= Imm_12[0]; //como estos dos son signed, 
+    always @(Shamt_5) for (i = 0; i < 20; i = i+1) signoshamtI[i] <= Shamt_5[0]; //hay que extenderlos acordemente
     
     assign ImmI = {signoImmI,Imm_12};
-    assign ImmS = {20'b,Imm_7,Imm_5};
+    assign ImmS = {20'b0,Imm_7,Imm_5};
     assign ShamtI = {signoshamtI,Shamt_5};
     assign ImmU = {Imm_20,12'b0};
     
