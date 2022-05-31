@@ -11,7 +11,7 @@ module REG_FILE_V2( //
     output [31:0] RD2
     );
     
-reg [31:0] x[31:0];//32 registros, de 32b cada uno (NOTE: pc vestigial para nuestros propositos, por tanto se ignora)
+    reg [31:0] x[32];//32 registros, de 32b cada uno (NOTE: pc vestigial para nuestros propositos, por tanto se ignora)
 reg [31:0] readA1,readA2;
 
 initial for (i = 0; i < 32; i = i+1) x[i] <= 32'b0;
