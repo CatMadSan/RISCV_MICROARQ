@@ -8,7 +8,7 @@ reg clock;
 //Outputs 
 wire [31:0] DOut;
 
-//Stimulus
+//Stimuli
 
 INSTRUCTION_MEMORY UUT(
     .Adress(Adress),
