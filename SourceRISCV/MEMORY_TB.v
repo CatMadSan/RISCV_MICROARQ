@@ -11,12 +11,12 @@ module MEMORY_TB();
 integer i;
 
 //Outputs 
-reg [31:0] ReadData;
+wire [31:0] ReadData;
 
 DataM UUT(
-    .clock(clock),
-    .Reset(Reset),
-    .Dir(Dir),
+    .CLK(clock),
+    .RST(Reset),
+    .Address(Dir),
     .WriteData(WriteData),
     .MemWrite(MemWrite),
     .ReadData(ReadData)
