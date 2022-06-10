@@ -23,7 +23,11 @@ DataM UUT(
     );
 
 initial begin
-clock <= 0;
+ clock <=0;
+ #20;
+ clock <=1;
+ #20;
+ clock <=0;
  forever #20 clock <= ~clock;
  end
  always@(posedge clock) begin
